@@ -5,22 +5,20 @@ export function sortCompare(key: string, order: string = "ascending") {
             return 0;
         }
 
-        const varA = (typeof a[key] === 'string') 
-            ? a[key].toUpperCase() : a[key];
-        const varB = (typeof b[key] === 'string')
-            ? b[key].toUpperCase() : b[key];
+        const aVal = a[key];
+        const bVal = b[key];
 
         let comparison = 0;
-        if (varA > varB) {
+        if (aVal > bVal) {
             comparison = 1;
-        } else if (varA < varB) {
+        } else if (aVal < bVal) {
             comparison = -1;
         }
 
         if (order === 'descending') {
-            return comparison;
-        } else if (order === 'ascending') {
             return comparison * -1;
+        } else if (order === 'ascending') {
+            return comparison;
         } else {
             return 0;
         }

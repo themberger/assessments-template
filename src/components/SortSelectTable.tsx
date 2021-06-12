@@ -28,7 +28,6 @@ function SortSelectTable(props: {countryData: []}) {
 
     // SET THE FILTER VALUE IN STATE [setCountryFilterVal]
     const handleFilter = (e: ChangeEvent<HTMLInputElement>): void => {
-        console.log(e.target.value);
         setCountryFilterVal(e.target.value);
     };
 
