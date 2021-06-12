@@ -26,19 +26,23 @@ function SortSelectTable(props: {countryData: []}) {
         }
     };
 
+    // SET THE FILTER VALUE IN STATE [setCountryFilterVal]
     const handleFilter = (e: ChangeEvent<HTMLInputElement>): void => {
         console.log(e.target.value);
         setCountryFilterVal(e.target.value);
     };
 
+    // SET THE INTIAL DATA SET FROM PROPS
     useEffect(() => {
         setFilteredData(props.countryData);
     }, [props.countryData]);
 
+    // SORT THE DATA BY POPULATION ... A STRANGE BUG IS OCCURING HERE WITH STATE WHEN SETTING SELECTED COUNTRY [setSelectedCountry]
     useEffect(() => {
         filteredData.sort(sortCompare('population', sortClass));
     }, [sortClass, filteredData]);
 
+    // FILTER RESULTS FOR COUNTRY AND CODE WITH INPUT VALUE
     useEffect(() => {
         if (countryFilterVal !== '' && countryFilterVal !== undefined) {
             const newData = [...props.countryData];
