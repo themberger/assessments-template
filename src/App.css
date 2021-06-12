@@ -1,0 +1,59 @@
+.main-container {
+    width: 100%;
+    margin-top: 20px !important;
+}
+
+.table-container {
+    width: 68%;
+    height: 700px;
+    overflow-y: scroll;
+}
+
+.ui.table thead tr:first-child > th {
+    position: sticky !important;
+    background-color: white;
+    top: 0;
+    z-index: 100;
+}
+
+.ui.sortable.table thead th.sorted {
+    background-color: white;
+}
+
+.ui.sortable.table thead th.sorted:hover {
+    background-color: white;
+}
+
+.ui.sortable.table thead th {
+    background-color: white;
+}
+
+.ui.sortable.table thead th:hover {
+    background-color: white;
+}
+
+.ui.list {
+    margin-left: 10px;;
+    text-align: left;
+}
+
+.ui.list .item {
+    padding: 10px;
+}
+
+.ui.list .item .header {
+    padding-bottom: 3px;
+}
+
+.ui.transparent.icon.input {
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.details-container {
+    width: 30%;
+}
+
+body {
+    overflow: hidden;
+}
