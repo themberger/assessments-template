@@ -57,7 +57,7 @@ function SortSelectTable(props: {countryData: []}) {
         } else {
             setFilteredData(props.countryData);
         }
-    }, [countryFilterVal, props.countryData]);
+    }, [countryFilterVal]);
     
     return (
         <div>
