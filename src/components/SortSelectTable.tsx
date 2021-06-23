@@ -36,7 +36,7 @@ function SortSelectTable(props: {countryData: []}) {
         setFilteredData(props.countryData);
     }, [props.countryData]);
 
-    // SORT THE DATA BY POPULATION ... A STRANGE BUG IS OCCURING HERE WITH STATE WHEN SETTING SELECTED COUNTRY [setSelectedCountry]
+    // SORT THE DATA BY POPULATION
     useEffect(() => {
         const newSortedData: any = [...filteredData].sort(sortCompare('population', sortClass));
         setFilteredData(newSortedData);
